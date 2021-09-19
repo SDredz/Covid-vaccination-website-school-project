@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vaccination Signup - COVID 19 awareness website - Sython</title>
+        <link rel="stylesheet" href="smoothscrolling.css">
+        <script src="form.js"></script>
+    </head>
+
+    <body>
+        <div class="container" style="background: url(images/backgrounds/crop-pexels-miguel-á-padriñán-3936421.jpg);">
+            <nav class="navbar">
+                <a href="Homepage.html"><img src="images/logo.png" width="40px"></a>
+                <ul>
+                    <li><a href="Homepage.html">Homepage</a></li>
+                    <li><a href="what_is_covid19.html">What is COVID-19</a></li>
+                    <li><a href="vaccines.html">Available  Vaccines</a></li>
+                    <li><a href="location_vaccine.html">Where can I get vaccinated</a></li>
+                    <li><a href="https://www.who.int/health-topics/coronavirus">Offical WHO website</a></li>
+                </ul>            
+                
+                <a href="Homepage.html"><img src="images/home button invert.png" class="newsletter"></a>
+                
+            </nav>
+            
+            <section id="form_container">
+                <script>
+                    window.alert("The Information collected here is only for use with scheduling\n your vaccination time and location")
+                
+                    function updateTextInput(val) {
+                        document.getElementById('textInput').value=val; 
+                    }
+
+                </script>
+                <p style="color: yellow;">The Information collected here is only for use with scheduling your vaccination time and location</p>
+
+                <form>
+                    <label for="Fname">First Name : </label>
+                    <input type="text" id="Fname" name="fname" placeholder="John"><br>
+
+                    <label for="Lname">Last Name : </label>
+                    <input type="text" id="Lname" name="lname" placeholder="Doe"><br><br>
+
+                    <label for="age">Age : </label>
+                    <input type="range" id="age" name="age" min="0" max="100" value="25" steps="1" onchange="updateTextInput(this.value);">
+                    <input type="text" id="textInput" value="" cols="1" readonly placeholder="25"><br>
+                    <!--<output name="age_val" for="age">25</output>-->
+                    <br>
+
+                    <label for="gender">Male </label>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="gender">Female </label>
+                    <input type="radio" id="female" name="gender" value="Female"><br><br>
+
+                    <label for="telephone">Telephone Number : </label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="876-123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required><br>
+                    <small>Number format: 876-123-4567</small><br><br>
+
+                    <label for="parish">Parish Located : </label>
+                    <select>
+                        <option value="Portland">Portland</option>
+                        <option value="St. Mary">St. Mary</option>
+                        <option value="St. Ann">St. Ann</option>
+                        <option value="Trelawny">Trelawny</option>
+                        <option value="St. James">St. James</option>
+                        <option value="Hanover">Hanover</option>
+                        <option value="Westmoreland">Westmoreland</option>
+                        <option value="St. Elizabeth">St. Elizabeth</option>
+                        <option value="Manchester">Manchester</option> 
+                        <option value="Clarendon">Clarendon</option>
+                        <option value="St. Catherine">St. Catherine</option>
+                        <option value="St. Andrew">St. Andrew</option>  
+                        <option value="Kingston">Kingston</option>                     
+                        <option value="St. Thomas">St. Thomas</option>
+                    </select><br><br>
+
+                    <label for="children">Children : </label>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option> 
+                        <option value="10">10</option>
+                    </select><br><br>
+
+                    <h3>
+                        Select all symptoms that apply:
+                    </h3>
+
+                    <label for="fever">Fever</label>
+                    <input type="checkbox" id="fever" name="symptoms" value="Fever">
+                    <label for="Dry Cough">| Dry Cough</label>
+                    <input type="checkbox" id="Dry Cough" name="symptoms" value="Dry Cough">
+                    <label for="Tiredness">| Tiredness</label>
+                    <input type="checkbox" id="Tiredness" name="symptoms" value="Tiredness">
+                    <label for="Taste smell">| Loss of Taste and smell</label>
+                    <input type="checkbox" id="Taste smell" name="symptoms" value="Taste smell"><br><br>
+            
+                    <Label for="covid comment">COVID-19 Additional Symptoms:</Label><br>
+                    <textarea name="covid comment" id="covid comment" rows="4" cols="40" placeholder="Enter comments here...."></textarea><br><br>
+
+                    <h3>
+                        Have you had COVID-19 recently?
+                    </h3>
+
+                    <label for="covid?">Yes</label>
+                    <input type="radio" id="Ycovid" name="covid?" value="Yes" onclick="unhideDate()">
+                    <label for="covid?">No</label>
+                    <input type="radio" id="Ncovid" name="covid?" value="No" onclick="hideDate()"><br><br>
+
+                    <p>
+                       
+                    </p>
+
+                    <label for="covid date" id="date_name" style="display: none;">Please specify the date: </label>
+                    <input type="date" id="covid date" name="covid date" style="display: none; align-items: center;"><br><br>
+
+
+                    <input type="submit" value="Submit" onclick="alert('Please send an mail to confirm that you are interested in taking the vaccine'); javascript: window.location.href='mailto:vaccine.confirm@sython.org'">
+                    <input type="reset" value="Reset">
+                
+                </form>
+            </section>
+            
+            <footer id="footer">
+                <p>&copy; 2021 Sython LTD Jamaica</p>
+                <p style="text-align: right;">Last Updated Jul 18, 2021</p>
+                <p style="text-align: right;">Email: helpdesk@sython.org</p>    
+            </footer>
+    
+        </div>
+    </body>
+</html>

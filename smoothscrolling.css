@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all .3s cubic-bezier(.16,.8,.62,1.52)
+}
+
+body{
+    
+    /*background-color: #00b0ff;*/
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.homecontainer{
+    width: 100%;
+    height: 100%;
+    /*CSS smooth Scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    /*padding-bottom: 100px;*/
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    /*CSS smooth Scroll */
+    /*overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    /*padding-bottom: 100px;*/
+
+    overflow: auto;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+ 
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar ul li a:hover {
+    color: skyblue;
+}
+
+.newsletter{
+    width: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    
+}
+
+section h1 {
+    font-size: 4rem;
+}
+
+section p {
+    font-size: 1.5rem;
+}
+
+/* section images*/
+
+section#home {
+    background: url("images/backgrounds/background2752.png") no-repeat center center/
+    cover;
+    /*background: rgba(0,0,0,0.7);*/
+}
+
+section#home h1{
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    width: 75%;
+    margin-top: -20px;
+    color: #E90000;
+    line-height: 1;
+    font-size: 50px;
+}
+
+section#home p {
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    width: 75%;
+    margin-top: 210px;
+    color: #E90000;
+}
+
+section#home .float{
+    margin: 20px;
+    color: #E90000;
+}
+
+section#covid {
+    background: url("images/backgrounds/pexels-miguel-á-padriñán-3936421.jpg") no-repeat center center/
+    cover;
+}
+
+.yellow {
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+section#covid .under_info {
+    padding-top: 20%;
+}
+
+section#vaccine {
+    background: url("images/backgrounds/pexels-thirdman-5921840.jpg") no-repeat center center/
+    cover;
+}
+
+section#vaccine p{
+    color: #111;
+}
+
+section#location {
+    background: url("images/backgrounds/pexels-anna-shvets-3845625.jpg") no-repeat center center/
+    cover;
+    color: #333;
+}
+
+section#top{
+    background: url("images/backgrounds/pexels-miguel-á-padriñán-3936421.jpg") no-repeat center center/
+    cover;
+}
+
+div#body_container{
+    background: url("images/backgrounds/crop-pexels-miguel-á-padriñán-3936421.jpg");
+}
+
+section#form_container{
+    background: url("images/backgrounds/crop-pexels-miguel-á-padriñán-3936421.jpg");
+}
+
+div#body_container a{
+    color: yellow;
+}
+
+
+
+#footer{
+    background-color: #000;
+    position: relative;
+    height: 100px;
+    margin-top: -90px;
+    clear: both;
+    scroll-snap-align: center;
+    text-align: left;
+}
+
+#footer img{
+    width: 40px;
+}
+
+.body_container{
+    margin-bottom: 250px;
+}
+
+
+/*Splits screen into left and right (unused)*/
+
+/*.split{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 20;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    left: 0;
+    background-color: #111;
+}
+
+.right{
+    right: 0;
+    background-color: red;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered img{
+    width: 150px;
+    border-radius: 50%;
+}*/
+
+table {
+    width: 1000px;
+    text-align: center;
+}
+
+section#vaccine table{
+    color: #111;
+    border-color: #111;
+}
+
+/*th {
+    text-align: left;
+}
+
+table, th, td{
+    border: 1px solid #000;
+}*/
+
+.center{
+    align-content: center;
+    /*padding-left: 50px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.red{
+    color: black;
+    font-weight: bold;
+}
+
+.more_info{
+    text-align: justify;
+    padding: 2%;
+}
+
+.more_info h2{
+    text-align: center;
+}
+
+.more_info ul{
+    line-height: 2;
+}
+
+.more_info p{
+    font-size: 16px;
+}
+
+
+/*Tyring to split part of the page into two*/
+.split{
+    width: 50%;
+    position:sticky;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left{
+    left: 0;
+    background-color: #111;
+}
+
+.right{
+    right: 0;
+    background-color: red;
+}
+
+.more_info h4{
+    text-align: center;
+    padding-top: 1%;
+}
+
+.covid_def{
+    padding-top: -100%;
+}
+
+section#top h1{
+    color: #fff;
+    padding-bottom: 13%;
+}
+
+.float {
+    color: #fff;
+    font-size: 30px;
+    animation: fl1 1.5s infinite linear;
+}
+
+@keyframes fl1 {
+    30%{
+        transform: translateY(20%);
+    }
+}
+
+/*input[type="range"]{
+position: relative;}
+
+input[type="range"]::before,
+input[type="range"]::after{
+    position: absolute;
+    display: inline-block;
+}
+
+input[type="range"]::before{
+    content: attr(min);
+    left: 0;
+    transform: translateX(calc(-100% - 5px));
+}
+
+input[type="range"]::after{
+    content: attr(max);
+    right: 0;
+    transform: translateX(calc(-100% + 5px));
+}
+
+input[type="range"]::-webkit-slider-runnable-track {}
+
+input[type="range"]::-webkit-slider-thumb {} */
+
+
+.map_o_ja {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .map_img {
+    position: relative;
+    top: 0;
+    left: 0;
+   
+  }
+  .location {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 80px;
+  }
+
